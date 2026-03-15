@@ -1,0 +1,9 @@
+{
+    "name": "SkyLands",
+    "version_number": "0.0.5",
+    "website_url": "https://marlthon.com",
+    "description": "Take your creativity to new heights! SkyLands introduces floating islands, offering unique terrains and breathtaking views for the base of your dreams.",
+    "dependencies": [ 
+		"denikson-BepInExPack_Valheim-5.4.2333"
+		]
+}

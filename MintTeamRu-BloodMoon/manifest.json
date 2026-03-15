@@ -1,0 +1,12 @@
+﻿{
+  "name": "BloodMoon",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/MinyMango/BloodMoon",
+  "description": "Adds a rare Blood Moon event: once every N days the night turns crimson, enemies become temporarily stronger (+1 star) and more numerous. Fully multiplayer compatible, visuals revert at dawn.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2200"
+  ],
+  "authors": [
+    "MintMango"
+  ]
+}

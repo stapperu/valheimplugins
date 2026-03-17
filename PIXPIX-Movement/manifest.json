@@ -1,9 +1,0 @@
-{
-  "name": "Movement",
-  "version_number": "0.7.3",
-  "website_url": "https://discord.gg/DvErue4TDM",
-  "description": "Adds 9 fresh progression based movements to Valheim. Dash, Overdrive, Double Jump, Wall Kick, Blink, Slam, Slide, ShieldSurf, and Landing Roll.",
-  "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.2202"
-  ]
-}

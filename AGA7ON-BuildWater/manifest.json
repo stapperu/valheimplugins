@@ -1,9 +1,0 @@
-{
-  "name": "BuildWater",
-  "version_number": "0.9.14",
-  "website_url": "",
-  "description": "Placeable water blocks with real water volume, terrain moisture, and live config updates.",
-  "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.2333"
-  ]
-}

@@ -1,0 +1,10 @@
+{
+ "name": "OdinsHollow",
+  "author": "OdinPlus",
+  "description": "A custom dungeon builder for server owners.",
+  "version_number": "2.1.8",
+  "website_url": "https://discord.gg/jkcJCq2sK5",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2333"
+  ]
+}

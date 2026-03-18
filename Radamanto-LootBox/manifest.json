@@ -1,0 +1,9 @@
+{
+    "name": "LootBox",
+    "version_number": "1.1.5",
+    "website_url": "https://discord.gg/rrChxZX4QX",
+    "description": "Configurable reward boxes.",
+    "dependencies": [ 
+			"denikson-BepInExPack_Valheim-5.4.2333"
+    ]
+}

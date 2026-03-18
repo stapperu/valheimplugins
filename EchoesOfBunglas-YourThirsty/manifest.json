@@ -1,0 +1,11 @@
+{
+    "name": "YourThirsty",
+    "version_number": "1.0.0",
+    "version_number": "2.1.2",
+    "website_url": "",
+    "description": "A full survival thirst system — HUD bar, waterskins, drinking horns, buckets, barrels, cauldron boiling, biome water quality, buffs, debuffs, and 4 difficulty modes. Drink or die.",
+    "description": "Adds a complete thirst and water system to Valheim. Drink from natural water, fill and use containers, boil water for safety, and manage hydration. See README and CHANGELOG for details.",
+    "dependencies": [
+        "denikson-BepInExPack_Valheim-5.4.2202"
+    ]
+}

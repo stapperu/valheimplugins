@@ -1,0 +1,430 @@
+**0.17.8**
+ ---
+ ```
+ - Adds a configuration (off by default) to allow bred animals to be infertile (50% chance, configurable)
+ - Fixes OnePerPlayer configuration giving one more piece of loot than intended
+ - Ensures trees destruction show their destruction effects
+ - Isolates Async code
+ ```
+
+**0.17.7**
+ ---
+ ```
+ - Adds a configuration (off by default) to allow bred animals a chance (5%, configurable) of gaining an additional level compared to their parents (up to max)
+ - Delays minimap drawing till after configuration is synced from dedicated servers
+ ```
+
+**0.17.6**
+ ---
+ ```
+ - Changes Egg scaling to increase productivity instead of level (configurable)
+	- This means that higher level creatures will produce more eggs, but the eggs themselves will not be higher level
+ - Adds a configuration option to enable force level scaling for drops which normally do not scale (trophies)
+ ```
+
+**0.17.5**
+ ---
+ ```
+ - Fixes an issue where fish could cause stuttering when interacting with the prep table
+ ```
+
+**0.17.4**
+ ---
+ ```
+ - New default configurations require that you delete your existing configuration if you want to use them!
+	- Fixes default loot distance modifiers providing too much loot
+	- Adjusts the default levelup chance to reduce high levels in the early game
+	- Adjusts level distance modifiers to allow for a wider range of levels at all distances
+ - Ensures per level damage modifiers are applied correctly to boss types
+ - Improves resiliance to invalid configurations
+ ```
+
+**0.17.3**
+ ---
+ ```
+ - Improves performance when used with DropThat
+ ```
+
+**0.17.2**
+ ---
+ ```
+ - Health coalesence multiplication fix
+ ```
+
+**0.17.1**
+ ---
+ ```
+ - Improves compatibility with Drop That
+ ```
+
+**0.17.0**
+ ---
+ ```
+ - Initial fix for riding issues with large or extremely large Lox and Askvin
+	- Changes are applied when the creature is loaded (or reloaded)
+ - Improves loot drop calculations to be more explicit in how each factor impacts the total loot
+ - Ensures that tamed creatures custom names are shown instead of name modifiers
+ - Enables performance modifications for treebase drops, along with custom loot table definitions
+ ```
+
+**0.16.2**
+ ---
+ ```
+ - Fixes a crash when mining Flametal
+ ```
+
+**0.16.1**
+ ---
+ ```
+ - Improves support for rock leveling
+ - Prevents potential exponential rock leveling on massive multipart drop tables
+ ```
+
+**0.16.0**
+ ---
+ ```
+ - Performance patch support for Minerock
+ - Improves compatibility between DropThat and SLS
+ - Adds in loot table support for non-creature loot objects
+	- Loot table dump command now supports including all of these (trees, DropOnDestroy, Minerock, Minerock5)
+ - Safety checks for removing all of the colorization configuration
+ - Adds a command to kill nearby creatures and prevent them from dropping loot
+ - Adds documentation for existing terminal commands
+ ```
+
+**0.15.3**
+ ---
+ ```
+ - Configuration to set ordering of name generation for creatures with modifiers
+ - Updated documentation to cover how to limit and expand star levels based on distance
+ - Fixes requiredModifiers not being enforced correctly and exposes configuration to set requiredModifiers per creature
+	- requiredModifiers can be added to any entry in creatureConfiguration, modifiers must include their name and type eg: 
+	  Boar:
+		requiredModifiers:
+		  Fire: Major
+ ```
+
+**0.15.2**
+ ---
+ ```
+ - Improves max level reduction
+ - Fixes level distance bonuses being applied as a multiplier instead of additive
+	- distance multipliers are still available in the form of biome distance scalars, by default these are used to curb extreme distance difficulty increases for Ashlands and DeepNorth
+ - Adds client side configuration to enable viewing final level calculation math and all modifiers that were applied to reach that level
+ ```
+
+**0.15.1**
+ ---
+ ```
+ - Prevents stone level scaling from being negative
+ - Fixes an issue where logs could spawn more than 2 segments on destruction
+ - Fixes an issue where deleting your configuration could result in loot table errors
+ ```
+
+**0.15.0**
+ ---
+ ```
+ - Adds loot leveling for Rocks (no size changes for rocks)
+	- Levels and loot increase configurable
+	- Rock levels are disabled by default (enable in the configs)
+- Adds a performance patch for wood, rock and destructible drops that will combine drops to help reduce heavy load when gaining massive amounts of resources
+ ```
+
+**0.14.6**
+ ---
+ ```
+ - Consistency improvements for delayed growth setup for bred creatures
+ - Recoloring of overleveled creatures that get rerolled
+ ```
+
+**0.14.5**
+ ---
+ ```
+ - Simplifies Modifier method setup calls
+ - Ensure creature modifier prefixes are limited properly
+ - Ensure creature modifiers are rolled by zowner or secondary
+ ```
+
+**0.14.4**
+ ---
+ ```
+ - Fixes cache reset before znet has updated character level
+ - Fixes level on-change running during loading
+ - Fixes children exploding instead of growing up
+ - Fixes Fish and Bird onchange settings running too early when connecting to a server
+ ```
+
+**0.14.3**
+ ---
+ ```
+ - Fixes drops being left behind by creatures selected for deletion
+ - Fixes spawned creatures not having their levels set correctly in some cases
+ ```
+
+**0.14.2**
+ ---
+ ```
+ - Significantly improves cache updates for networked changes to creature modifiers and levels
+ - Force rerolling of creatures above the maximum level will now also resize them to the correct size
+ - Fixes a race condition where tamed breeding creature would not inherit the correct level
+ - Fixes and issue where splitters would not always inherit the correct level from the parent creature
+ ```
+
+**0.14.1**
+ ---
+ ```
+ - Fixes an issue where deterministic tree scaling would result in no wood if the tree rolled level 0
+ - Added in-game size-rescaling for trees, fish, and birds, changing size configurations will now automatically rescale
+ ```
+
+**0.14.0**
+ ---
+ ```
+ - Improves UI synchronziation for creature modifier names
+ - Fixes an error when Lifelink triggers
+ - Changes configuration for Trees, Birds and Fish to have their own config section
+   - Trees now level up primarily based on distance to spawn/center of the world.
+   - Fish size is now reduced
+ ```
+
+**0.13.0**
+ ---
+ ```
+ - Added a configuration option to force-reroll creatures that are over the specified max level when loaded
+ - Enables Map Ring redraw/removal when setting is changed
+ - Added more safety checks to BossSummoner
+ - Fixes an issue where characters would not get size increases
+ - Re-implements character client side cache
+ - Modifiers Updated (please delete your Modifiers.yaml)
+	- Changes Modifier name generation to be deterministic, removes multiple prefix and postfix options
+	- Updated Modifier configuration with user important details being centric
+ ```
+
+**0.12.1**
+ ---
+ ```
+ - Logged detailed scaling changes for damage per level
+ - Fix splitter not splitting when using fallbacks
+ - More cache invalidation for UI related and setup changes
+ - Fix size scale setting weapon sizes to zero before a creature has scale data
+ - Fixed Character specific level tables not being used if a biome table was available
+ ```
+
+**0.12.0**
+ ---
+ ```
+ - Fixes an issue where resistant creatures would be immune to damage (does not apply to creatures that have already rolled this modifier)
+ - Improves modifier and level consistency across players with variable connection speeds and latencies
+ - Provides more information for damage recieved and dealt modifiers, can be enabled/disabled seperately in the config (per client)
+ - Changed a number of base values in the modifiers configuration, it is recommended you delete your configuration
+ - Some modifiers no longer run regularly and instead are setup once, again required that you regenerate your configuration (delete Modifiers.yaml)
+ - Tuning
+	- Nerfed the boss modifier for resist pierce to be 25% resistance plus 2% per level
+	- Buffed Lootbags to provide more loot, also makes the creature slightly higher health and move faster
+	- Capped resistance modifiers at 80% resistance, nerfed default resistance values
+	- Increased the delay for the boss affix summoner
+	- Significantly reduced brutal speed modifiers (some old configs had these at 100%+ increases)
+	- Improved fallback logic for Splitter
+ ```
+
+**0.11.8**
+ ---
+ ```
+ - Improves cache consistency between clients
+ - Provides configuration to allow tames to pass modifiers to child creatures
+ - Allows configuring tame modifier inheritence
+ - Ensures children maintain their modifiers when growing up
+ ```
+
+**0.11.7**
+ ---
+ ```
+ - Asynchronous creature checks and fallback for creature setup
+ - Fixes server error when attempting to build minimap rings
+ ```
+
+**0.11.6**
+ ---
+ ```
+ - Fixes baby creatures not inheriting level when not using randomized baby levels
+ ```
+
+**0.11.5**
+ ---
+ ```
+ - Adds safety checks when removing all level definitions
+ ```
+
+**0.11.4**
+ ---
+ ```
+ - Expands DistanceScaleModifier to also work when applied to specific creatures
+ ```
+
+**0.11.3**
+ ---
+ ```
+ - Fixes character specific level settings not always overriding default level settings
+ - Provides a way to set force level control for specific creatures
+	- Training dummy is default included in this
+ - Expanded caching of short term character entries to prevent constant recalculation
+ - Fixed tame level settings not being under the correct category
+ ```
+
+**0.11.2**
+ ---
+ ```
+ - Fixes spawn levels not being set for creatures created from loot table drops
+ - Fixed level not always being accounted for in loot table drop calculations
+ - Set default custom loot drops for Oozers (blobElite)
+	- No longer spawns 2 blobs per level, now spawns up to 6 blobs, moderately scaling by level
+	- Delete your CreatureLootSettings.yaml if you want the new default
+ ```
+
+**0.11.1**
+ ---
+ ```
+ - Fixes distance calculations for dungeons incorrectly accounting for height
+ ```
+
+**0.11.0**
+ ---
+ ```
+ - Adds Ring drawing for spawn distance modifiers for visualization
+  - This is toggleable via config, and can be shown/hidden per player from the map itself
+  - Color configuration for all rings
+  - Rings are automatically redrawn when configuration changes
+  - Retuned all of the default distance modifiers to allow slightly more regular difficulty increases, along with much higher star levels
+	- Delete your config (LevelSettings.yaml) if you want the new default
+ - Fixes an error when trying to spawn null creatures
+ - Improves spawning not leveling up creatures from certain spawners
+ ```
+
+**0.10.2**
+ ---
+ ```
+ - Compatibility improvements for spawner level control when the cache can't be built
+ - Improves compatibility for mods that break or remove spawner effects
+ ```
+
+**0.10.1**
+ ---
+ ```
+ - Fixed a bug (from 0.10.0) which prevented many of the random world spawns from happening
+ - Tuned level up table to have more staggered steps towards the higher levels
+ - Disabled a few more optional debug logs
+ - Added back in default loot table modifications for greydwarves to drop greydwarf eyes
+ - "Fixed" a feature where extremely high level creatures with many modifiers would always spawn with splitter, and multiply on kills
+ ```
+
+**0.10.0**
+ ---
+ ```
+ - Adds night-time specific configuration
+	- Disable certain spawns at night, per creature/biome (disable night spawns caused by boss kills etc)
+	- Modify spawn rates at night, per creature/biome
+	- Modify level scales at night, per creature/biome (higher or lower chances of high level creatures)
+ - Fixes a bug where creature items would be twice as big as intended
+ - Adds configuration options to controll which spawners SLS controls (now defaults manual spawns to not be controlled)
+	- This improves support for mods which manually spawn creatures
+ - Updates default level scales to be more aggressive and increase weight further from center
+ - Disabled some optional debug logging
+ - Rebalances default level settings configuration
+ ```
+
+**0.9.6**
+ ---
+ ```
+ - Fixes lifelink always applying a damage reduction, now only applies damage reduction if there is a target to redirect damage to
+ - Adds: BiomeMinLevelOverride and CreatureMinLevelOverride, which will ensure creatures spawn at least at the specified level
+ ```
+
+**0.9.5**
+ ---
+ ```
+ - Colorization configuration (allow skipping colorization)
+ - API fix for colorization not applying correctly
+ ```
+
+**0.9.4**
+ ---
+ ```
+ - Improves configurability of local player damage and health scaling
+ - Fixes frost modifier effect for Linux
+ - Reduced default spawn rate config
+ ```
+
+**0.9.3**
+ ---
+ ```
+ - Limits the number of modifiers that can be applied due to star level for both modifier types, instead of individually
+ - Prevents global and per creature configuration from stacking health modifiers
+ - Per level damage modifications take the highest priority modifier only
+ - Retuned many of the damage modifers to be less aggressive in their damage increases
+ ```
+
+**0.9.2**
+ ---
+ ```
+- Ensures manually spawned creatures get a fair chance of modifiers
+- Fixes CreatureLootSettings.yaml not being live reloaded after edits
+- Added a global exclusion list for modifiers that will apply to all creatures, defaults to just TWIG
+	- Delete your config (Modifiers.yaml) if you want the new default
+- Fixes modifier configuration not being reloaded on startup
+- Removed the immediate explosion from FireNova, it now only has the 1 second delayed explosion
+ ```
+
+**0.9.1**
+ ---
+ ```
+ - Fixes NPE when no loot configuration is defined
+ - Fixes NPE when trying to add a modifier that does not exist
+ - Improves support for huge numbers of modifiers on creatures
+ - Adds API functions to add modifiers to creatures
+ ```
+
+**0.9.0**
+ ---
+ ```
+ - Partial API support, manipulation of creature levels, color, attributes, damage, damage recived
+ - Reduces spawn multiplier checks during race conditions
+ - Prevents UI errors when creatures have duplicated modifiers
+ ```
+
+**0.8.4**
+ ---
+ ```
+ - Compatibility improvements for mods with weaponless characters
+ - Adds a config option to limit the number of modifiers that a creature gets to its star level in addition to the max number of modifiers
+ - Updated name generation to always add available modifiers
+ - Added a config option to avoid spawn multiplying boss creatures
+ ```
+
+**0.8.3**
+ ---
+ ```
+ - Compatibility improvement with mods that manipulate or add star entries
+ ```
+
+**0.8.2**
+ ---
+ ```
+ - Fix for splitting tames not spawned tamed minions
+ - NPE fix for creatures death before setup
+ - Config spelling fix for LootDropCalculationType
+ ```
+
+**0.8.1**
+ ---
+ ```
+ - Adding incompatibility with CLLC
+ - Improving compatibility for spawned child creatures multiplied by biome multipliers
+ - Improving multiplier compatibility for spawn command and boss spawns
+ - Adding initial translations for 26 languages
+ ```
+
+**0.8.0**
+ ---
+ ```
+ - Public release
+ ```

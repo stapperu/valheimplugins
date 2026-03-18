@@ -1,0 +1,9 @@
+{
+    "name": "Corsairs",
+    "version_number": "0.2.5",
+    "website_url": "https://marlthon.com",
+    "description": "Fight to conquer treasures, free slaves and face Boss Rollo and recover the sword and shield stolen from the mod's creator.",
+    "dependencies": [
+        "denikson-BepInExPack_Valheim-5.4.2333"
+    ]
+}

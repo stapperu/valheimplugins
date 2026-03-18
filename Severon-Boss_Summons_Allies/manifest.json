@@ -1,0 +1,9 @@
+{
+    "name": "Boss_Summons_Allies",
+    "version_number": "0.7.1",
+    "website_url": "https://discord.gg/DqJEz4fN",
+    "description": "Allows the bosses to summon waves of enemies at a configurable amount of time.",
+    "dependencies": [
+        "denikson-BepInExPack_Valheim-5.4.2333"
+    ]
+}

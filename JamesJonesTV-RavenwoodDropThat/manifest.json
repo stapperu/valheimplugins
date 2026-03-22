@@ -1,0 +1,13 @@
+{
+    "name": "RavenwoodDropThat",
+    "version_number": "3.0.1",
+    "website_url": "https://discord.gg/h6cDGkgE8h",
+    "description": "Drop that config that adds finite drops to monsters drop tables, lowers trophy drop chance, add drops from Epic Loot, Distant Origins and other mods, Treasure Chests to boss drops and Dragon Essences and Souls to most creatures for Elemental Dragons!",
+    "dependencies": [
+		"ASharpPen-Drop_That-3.1.4",
+		"Radamanto-LootBox-1.1.6"
+	
+	
+	
+    ]
+}

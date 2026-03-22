@@ -1,0 +1,10 @@
+{
+  "name": "RavenwoodPieces",
+  "description": "Adds 130+ new building pieces. Adds signs for tameable creatures. Adds Multiple Themed Massive Wall Pieces that defy physics. 15 Trees, 8 Hedges, 7 Road Items. Also adds 5 mushroom lights that stops monsters from spawning within 10-100m and more!",
+  "version_number": "2.0.4",
+  "website_url": "https://discord.gg/h6cDGkgE8h",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2202",
+    "ValheimModding-Jotunn-2.24.3"
+  ]
+}

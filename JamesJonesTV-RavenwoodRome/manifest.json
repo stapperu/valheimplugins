@@ -1,0 +1,10 @@
+{
+  "name": "RavenwoodRome",
+  "description": "Adds 100+ new Roman building pieces.",
+  "version_number": "1.0.1",
+  "website_url": "https://discord.gg/h6cDGkgE8h",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2202",
+    "ValheimModding-Jotunn-2.20.1"
+  ]
+}
